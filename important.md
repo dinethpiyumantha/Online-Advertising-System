@@ -1,1 +1,1 @@
-# Important Messages   විශ‌ේෂ පණිවිඩ
+# Important Messages
