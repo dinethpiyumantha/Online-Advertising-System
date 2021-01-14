@@ -20,8 +20,9 @@ export default class NavigationBar extends Component {
                     <div className="collapse navbar-collapse">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
+                        
                         <div className="dropdown">
-                            <button className="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                            <button className="btn text-white dropdown-toggle" type="button" data-toggle="dropdown">
                                 <FaUserAlt/> Profile
                             <span className="caret"></span></button>
                             <ul className="dropdown-menu p-2">

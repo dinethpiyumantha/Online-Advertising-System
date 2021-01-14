@@ -9,7 +9,7 @@ import HomeComponent from './components/HomeComponent';
 
 function App() {
   return (
-    <div className="App bg-light">
+    <div className="App">
       <HomeComponent/>
     </div>
   );
