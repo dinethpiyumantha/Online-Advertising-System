@@ -1,7 +1,7 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import './osastyle.css';
 
 import './App.css';
-import './styles.css';
 
 import HomeComponent from './components/HomeComponent';
 
