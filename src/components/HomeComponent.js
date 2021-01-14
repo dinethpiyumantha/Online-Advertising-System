@@ -8,7 +8,6 @@ export default class HomeComponent extends Component {
             <div>
                 <NavigationBar/>
                 <div className="container">
-
                 </div>
             </div>
         );
