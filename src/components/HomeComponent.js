@@ -7,6 +7,9 @@ export default class HomeComponent extends Component {
         return(
             <div>
                 <NavigationBar/>
+                <div className="container">
+
+                </div>
             </div>
         );
     }
