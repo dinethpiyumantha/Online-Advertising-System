@@ -20,3 +20,10 @@ a.bg-black:focus,a.bg-black:hover,button.bg-black:focus,button.bg-black:hover{
 a.bg-purple:focus,a.bg-purple:hover,button.bg-purple:focus,button.bg-purple:hover{
     background-color:var(--dark-purple)!important
 }
+
+.bg-floral-white{
+    background-color:var(--floral-white)!important
+}
+a.bg-floral-white:focus,a.bg-floral-white:hover,button.bg-floral-white:focus,button.bg-floral-white:hover{
+    background-color:var(--floral-white)!important
+}
