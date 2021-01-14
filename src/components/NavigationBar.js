@@ -12,7 +12,7 @@ export default class NavigationBar extends Component {
                         <img src={Logo} alt="logo" width="40" height="40"/>
                     </div>   
 
-                    <button type="button" class="btn btn-primary btn-sm">Show Ads</button>
+                    <button type="button" class="btn btn-flame btn-sm">Show All Ads</button>
 
                 </div>
             </nav>
