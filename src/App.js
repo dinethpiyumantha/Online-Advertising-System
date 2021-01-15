@@ -3,6 +3,7 @@ import './osastyle.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import 'jquery/dist/jquery.min.js';
 
+
 import './App.css';
 import Footer from './components/Footer';
 
@@ -10,7 +11,7 @@ import HomeComponent from './components/HomeComponent';
 
 function App() {
   return (
-    <div className="App">
+    <div className="">
       <HomeComponent/>
       <Footer/>
     </div>
