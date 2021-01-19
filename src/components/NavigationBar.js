@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import Logo from '../logo.svg';
-
-import {Link} from 'react-router-dom';
 import { FaUserAlt } from 'react-icons/fa';
 import { FaUserSlash } from 'react-icons/fa';
 import { MdSettings } from 'react-icons/md';
 import Login from './User/Login';
+import ValiationForm from './User/ValidationForm';
 
 export default class NavigationBar extends Component {
     render() {
@@ -35,7 +34,8 @@ export default class NavigationBar extends Component {
                     </div>
                     {/* <button class="btn btn-success m-2" data-toggle="modal" data-target="#loginPage">Login</button> */}
                     <Login></Login>
-                    <button class="btn btn-warning "><Link to="/register">Register</Link> </button>
+                    {/* <button class="btn btn-warning "><Link to="/register">Register</Link> </button> */}
+                    <ValiationForm></ValiationForm>
                 </div>
             </nav>
         );
