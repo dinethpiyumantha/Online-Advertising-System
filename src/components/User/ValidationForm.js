@@ -1,6 +1,9 @@
 //import {style} from './stylesheets/stylesheet.css' ;
 import React from "react";
 import './stylesheets/stylesheet.css' ;
+import axios from 'axios';
+
+
 
 const initialState = {
   name: "",
@@ -44,7 +47,7 @@ export default class ValiationForm extends React.Component {
     }
     if (!this.state.conformPasword) {
       conformPassError = "Confirm password is required";
-    } else if (!(this.state.password==this.state.conformPasword)){
+    } else if (!(this.state.password===this.state.conformPasword)){
       conformPassError = "Passwords do not match";
     }
 
