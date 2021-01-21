@@ -5,6 +5,12 @@ import { FaUserSlash } from 'react-icons/fa';
 import { MdSettings } from 'react-icons/md';
 import Login from './User/Login';
 import ValiationForm from './User/ValidationForm';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 export default class NavigationBar extends Component {
     render() {
@@ -33,9 +39,13 @@ export default class NavigationBar extends Component {
                         </ul>   
                     </div>
                     {/* <button class="btn btn-success m-2" data-toggle="modal" data-target="#loginPage">Login</button> */}
-                    <Login></Login>
+                    
                     {/* <button class="btn btn-warning "><Link to="/register">Register</Link> </button> */}
+                    
+                    <Router>
+                    <Login></Login>
                     <ValiationForm></ValiationForm>
+                    </Router>
                 </div>
             </nav>
         );

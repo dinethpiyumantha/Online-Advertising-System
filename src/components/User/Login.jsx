@@ -13,14 +13,28 @@
  )
 
  export default class Login extends React.Component {
-     constructor(){
-         super();
-         api.get('/').then(res => {
-             console.log(res.data)
-         })
-     }
-   
+ 
     state=initialstate;
+
+    validate = () => {
+      let passwordError = "";
+      let emailError = "";
+      if (!this.state.email) {
+        emailError = "Email cannot be blank";
+      } else if (!this.state.email.includes("@")) {
+          emailError = "invalid email";
+        }
+      if (!this.state.password) {
+          passwordError = "password cannot be blank";
+        }
+        
+        if (emailError || passwordError) {
+          this.setState({ emailError, passwordError});
+          return false;
+        }
+    
+        return true;  
+    }
     handleChange = event => {
        const isCheckbox = event.target.type === "checkbox";
        this.setState({
@@ -29,30 +43,36 @@
            : event.target.value
        });
      };
-     validate = () => {
-       let passwordError = "";
-       let emailError = "";
-   
-       if (!this.state.email.includes("@")) {
-           emailError = "invalid email";
-         }
-       if (!this.state.password) {
-           passwordError = "password cannot be blank";
-         }
-         
-         if (emailError || passwordError) {
-           this.setState({ emailError, passwordError});
-           return false;
-         }
-     
-         return true;  
-     }
+     constructor(){
+      super();
+      this.state = {
+       users:[]
+      }
+      api.get('/').then(res => {
+       this.setState({ users: res.data })
+          //console.log(this.state.users[1]);
+      })
+  }
+
+  
      handleSubmit = event => {
        event.preventDefault();
        const isValid = this.validate();
        if (isValid) {
-         console.log(this.state);
+         //console.log(this.state);
          // clear form
+         //let num=0;
+          for (let index = 0; index < this.state.users.length; index++) {
+             if ((this.state.email)===(this.state.users[index].email)) {
+               if ((this.state.password)===(this.state.users[index].name)) {
+                console.log('register succesdfull');
+               }else{
+                console.log('unsuccesfull');
+              }
+               
+            }
+          }
+          
          this.setState(initialstate);
        }
      };
