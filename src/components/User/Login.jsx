@@ -1,5 +1,7 @@
  import React from 'react';
  import axios from 'axios';
+import AuthApi from './AuthApi';
+import Suceeslogin from './Suceeslogin';
  
  const initialstate = {
     email: "",
@@ -11,7 +13,9 @@
          baseURL:'http://localhost:8080/User/all'
      }
  )
+ 
 
+ 
  export default class Login extends React.Component {
  
     state=initialstate;
@@ -63,23 +67,33 @@
          // clear form
          //let num=0;
           for (let index = 0; index < this.state.users.length; index++) {
-             if ((this.state.email)===(this.state.users[index].email)) {
-               if ((this.state.password)===(this.state.users[index].name)) {
-                console.log('register succesdfull');
+             if ((this.state.email)==(this.state.users[index].email)) {
+               if ((this.state.password)==(this.state.users[index].name)) {
+                
+                console.log('sucessfull log');
+                
+                
                }else{
-                console.log('unsuccesfull');
+                console.log('password incorect');
               }
-               
+            }else{
+              console.log('email incorct')
             }
           }
           
          this.setState(initialstate);
        }
      };
+    
+        
+     
+    
      render() {
+       
          return (
+           
              <div>
-                 <button class="btn btn-success m-2" data-toggle="modal" data-target="#loginPage">Login</button>
+                 <button class="btn btn-success m-2" data-toggle="modal" data-target="#loginPage" >Login</button>
                   {/* Login and Register model poop css use */}
 
                   <div className="modal fade" tabindex="-1" id="loginPage" role="dialog">
@@ -120,7 +134,7 @@
                                     <input type="checkbox" className="form-check-input" id="exampleCheck1"></input>
                                     <label className="form-check-label" for="exampleCheck1">Check me out</label>
                                 </div>
-                                <button type="submit" className="btn btn-primary">Login</button>
+                                <Suceeslogin></Suceeslogin>
                                 </form>
                     </div>
                     <div class="modal-footer">
@@ -133,4 +147,6 @@
          )
      }
  }
+ 
+ 
  

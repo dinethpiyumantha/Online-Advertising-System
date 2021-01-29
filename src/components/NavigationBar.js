@@ -3,17 +3,12 @@ import Logo from '../logo.svg';
 import { FaUserAlt } from 'react-icons/fa';
 import { FaUserSlash } from 'react-icons/fa';
 import { MdSettings } from 'react-icons/md';
-import Login from './User/Login';
-import ValiationForm from './User/ValidationForm';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
+import LoginRegister from './User/LoginRegister';
+
 
 export default class NavigationBar extends Component {
     render() {
+        
         return(
             <nav className="navbar navbar-expand-lg navbar-light bg-primary py-2">
                 <div className="container-fluid">
@@ -41,13 +36,12 @@ export default class NavigationBar extends Component {
                     {/* <button class="btn btn-success m-2" data-toggle="modal" data-target="#loginPage">Login</button> */}
                     
                     {/* <button class="btn btn-warning "><Link to="/register">Register</Link> </button> */}
-                    
-                    <Router>
-                    <Login></Login>
-                    <ValiationForm></ValiationForm>
-                    </Router>
+                  <LoginRegister></LoginRegister>
+                   
                 </div>
             </nav>
         );
+        
     }
 }
+
