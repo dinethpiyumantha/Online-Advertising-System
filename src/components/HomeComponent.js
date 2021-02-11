@@ -5,14 +5,16 @@ import AdHome from './ad/AdHome';
 import AddAd from './ad/AddAd';
 
 
+
 export default class HomeComponent extends Component {
     render() {
         return(
             <div>
-                <NavigationBar/>
+              
                 
+                <NavigationBar/>
                 <AdHome/>
-
+               
             </div>
         );
     }
