@@ -3,7 +3,7 @@ import Logo from '../logo.svg';
 import { FaUserAlt } from 'react-icons/fa';
 import { FaUserSlash } from 'react-icons/fa';
 import { MdSettings } from 'react-icons/md';
-import LoginRegister from './User/LoginRegister';
+import LoginRegister from './user/LoginRegister';
 
 
 export default class NavigationBar extends Component {
@@ -17,22 +17,23 @@ export default class NavigationBar extends Component {
                     </div>   
 
                     <button type="button" class="btn btn-warning btn-sm">Show All Ads</button>
+                    
+                    <div className="collapse navbar-collapse">{/* <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul> */}</div>
+                    
+                    <button type="button" class="btn btn-info btn rounded-pill" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Easy and Fast">Post Your Ad Here</button>
 
-                    <div className="collapse navbar-collapse">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-
-                        
-                        <div className="dropdown">
-                            <button className="btn text-white dropdown-toggle" type="button" data-toggle="dropdown">
+                    <div className="nav-item dropdown">
+                            <button className="btn text-white dropdown-toggle pr-5" type="button" data-toggle="dropdown">
                                 <FaUserAlt/> Profile
-                            <span className="caret"></span></button>
+                            <span className="caret"></span>
+                            </button>
                             <ul className="dropdown-menu p-2">
-                                <li className="btn btn-white w-100"><MdSettings/> Settings</li>
-                                <li className="btn btn-white w-100"><FaUserSlash/> Sign out</li>
+                                <li className="btn btn-white w-100 text-left"><MdSettings/> Settings</li>
+                                <li className="btn btn-white w-100 text-left"><FaUserSlash/> Sign out</li>
                             </ul>
                         </div>
-                        </ul>   
-                    </div>
+                          
+                    
                     {/* <button class="btn btn-success m-2" data-toggle="modal" data-target="#loginPage">Login</button> */}
                     
                     {/* <button class="btn btn-warning "><Link to="/register">Register</Link> </button> */}

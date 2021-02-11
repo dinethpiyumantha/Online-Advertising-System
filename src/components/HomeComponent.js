@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import NavigationBar from './NavigationBar';
 import AdHome from './ad/AdHome';
+import AddAd from './ad/AddAd';
 
 
 
