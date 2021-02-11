@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import Logo from '../logo.svg';
-
-
 import { FaUserAlt } from 'react-icons/fa';
 import { FaUserSlash } from 'react-icons/fa';
 import { MdSettings } from 'react-icons/md';
+import LoginRegister from './User/LoginRegister';
+
 
 export default class NavigationBar extends Component {
     render() {
+        
         return(
             <nav className="navbar navbar-expand-lg navbar-light bg-primary py-2">
                 <div className="container-fluid">
@@ -30,11 +31,17 @@ export default class NavigationBar extends Component {
                                 <li className="btn btn-white w-100"><FaUserSlash/> Sign out</li>
                             </ul>
                         </div>
-
-                        </ul>
+                        </ul>   
                     </div>
+                    {/* <button class="btn btn-success m-2" data-toggle="modal" data-target="#loginPage">Login</button> */}
+                    
+                    {/* <button class="btn btn-warning "><Link to="/register">Register</Link> </button> */}
+                  <LoginRegister></LoginRegister>
+                   
                 </div>
             </nav>
         );
+        
     }
 }
+
