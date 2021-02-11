@@ -16,23 +16,21 @@ export default class NavigationBar extends Component {
                     </div>   
 
                     <button type="button" class="btn btn-warning btn-sm">Show All Ads</button>
+                    
+                    <div className="collapse navbar-collapse">{/* <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul> */}</div>
+                    
+                    <button type="button" class="btn btn-info btn rounded-pill" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Easy and Fast">Post Your Ad Here</button>
 
-                    <div className="collapse navbar-collapse">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-
-                        
-                        <div className="dropdown">
-                            <button className="btn text-white dropdown-toggle" type="button" data-toggle="dropdown">
+                    <div className="nav-item dropdown">
+                            <button className="btn text-white dropdown-toggle pr-5" type="button" data-toggle="dropdown">
                                 <FaUserAlt/> Profile
-                            <span className="caret"></span></button>
+                            <span className="caret"></span>
+                            </button>
                             <ul className="dropdown-menu p-2">
-                                <li className="btn btn-white w-100"><MdSettings/> Settings</li>
-                                <li className="btn btn-white w-100"><FaUserSlash/> Sign out</li>
+                                <li className="btn btn-white w-100 text-left"><MdSettings/> Settings</li>
+                                <li className="btn btn-white w-100 text-left"><FaUserSlash/> Sign out</li>
                             </ul>
                         </div>
-
-                        </ul>
-                    </div>
                 </div>
             </nav>
         );

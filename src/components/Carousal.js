@@ -16,6 +16,9 @@ export default class Carousal extends Component {
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <img src={C1} className="d-block w-100" alt="..."/>
+                        <div className="alert alert-light position-absolute" role="alert">
+                        A simple light alert—check it out!
+                        </div>
                     </div>
                     {/* <div className="carousel-item">
                         <img src="..." className="d-block w-100" alt="..."/>
